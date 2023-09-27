@@ -73,6 +73,8 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 # Activate
 .\venv\Scripts\Activate.ps1
 
+python -m pip install --upgrade pip
+
 pip install -r requirements.txt --index-url=https://pypi.org/simple
 
 uvicorn app.main:app --port 8000 --reload
